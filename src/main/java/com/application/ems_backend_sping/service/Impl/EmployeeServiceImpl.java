@@ -52,14 +52,13 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeRepository.existsByEmail(updatedEmployee.getEmail())) {
             throw new EmailAlreadyExistsException("Email already exists");
         }
-
         employee.setFirstName(updatedEmployee.getFirstName());
         employee.setLastName(updatedEmployee.getLastName());
         employee.setEmail(updatedEmployee.getEmail());
-
         Employee updatedEmployeeObj = employeeRepository.save(employee);
         return EmployeeMapper.mapToEmployeeDto(updatedEmployeeObj);
     }
+
 
     @Override
     public void deleteEmployee(Long employeeId) {

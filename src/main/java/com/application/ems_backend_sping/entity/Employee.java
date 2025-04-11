@@ -2,9 +2,8 @@ package com.application.ems_backend_sping.entity;
 
 import jakarta.persistence.*;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "employees")
 
